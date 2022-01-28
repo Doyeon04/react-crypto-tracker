@@ -11,7 +11,7 @@ function Router({ isDark, toggleDarkMode }: RouterProps) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path={process.env.PUBLIC_URL + "/:coinId"}>
+        <Route path={process.env.PUBLIC_URL + "/react-crypto-tracker/:coinId"}>
           <Coin isDark={isDark} />
         </Route>
         <Route path={process.env.PUBLIC_URL + "/"}>
