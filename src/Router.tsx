@@ -11,7 +11,7 @@ function Router({ isDark, toggleDarkMode }: RouterProps) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/:coinId">
+        <Route path={`${process.env.PUBLIC_URL}/:coinId`}>
           <Coin isDark={isDark} />
         </Route>
         <Route path="/">
