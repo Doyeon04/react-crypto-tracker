@@ -9,12 +9,12 @@ interface RouterProps {
 
 function Router({ isDark, toggleDarkMode }: RouterProps) {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route path={process.env.PUBLIC_URL + "/react-crypto-tracker/:coinId"}>
+        <Route path={"/:coinId"}>
           <Coin isDark={isDark} />
         </Route>
-        <Route path={process.env.PUBLIC_URL + "/"}>
+        <Route path={"/"}>
           <Coins toggleDark={toggleDarkMode} isDark={isDark} />
         </Route>
       </Switch>
