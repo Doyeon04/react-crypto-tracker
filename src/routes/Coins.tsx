@@ -95,14 +95,14 @@ interface ICoin {
   type: string;
 }
 
-interface CoinsProps {
+interface ICoinsProps {
   toggleDark: () => void;
   isDark: boolean;
 }
 
-function Coins({ toggleDark, isDark }: CoinsProps) {
+function Coins({ toggleDark, isDark }: ICoinsProps) {
   const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
-  console.log(isDark);
+  
 
   return (
     <Container>

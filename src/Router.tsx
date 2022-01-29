@@ -2,12 +2,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Coin from "./routes/Coin";
 import Coins from "./routes/Coins";
 
-interface RouterProps {
+interface IRouterProps {
   toggleDarkMode: () => void;
   isDark: boolean;
 }
 
-function Router({ isDark, toggleDarkMode }: RouterProps) {
+function Router({ isDark, toggleDarkMode }: IRouterProps) {
   return (
     <BrowserRouter basename="/react-crypto-tracker">
       <Switch>
